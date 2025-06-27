@@ -59,49 +59,49 @@ input[type="range"] {
 }
 
 /* class added by js */
-.item-container{
-    display: flex;
-    align-items: center;
-    column-gap: 6px;
-    padding: 6px;
+.item-container {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+  padding: 6px;
 }
 
-.item-tag{
-    flex-grow: 0;
+.item-tag {
+  flex-grow: 0;
 }
 
-.track-year{
-    color: var(--Gray-3);
-    font-family: "Poppins";
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
+.track-year {
+  color: var(--Gray-3);
+  font-family: "Poppins";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
 }
 
-.track-data-container{
-    flex-grow: 1;
+.track-data-container {
+  flex-grow: 1;
 }
 
-.track-title{
-    color: var(--Gray-1);
-    font-family: "Poppins";
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 110.5%;
+.track-title {
+  color: var(--Gray-1);
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110.5%;
 }
 
-.track-artist{
-    color: var(--Gray-2);
-    font-family: "Poppins";
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 110.5%;
+.track-artist {
+  color: var(--Gray-2);
+  font-family: "Poppins";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110.5%;
 }
 
-.current-song{
-    color: var(--pinkish);
+.current-song {
+  color: var(--pinkish);
 }
 /* class ended by js */
 
@@ -214,6 +214,20 @@ input[type="range"] ::-webkit-slider-thumb {
 
 .btn-group > button {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.next-prev-btn {
+  padding-top: 16px;
+}
+
+.player-bottom-controls {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .control-btn {
@@ -238,4 +252,152 @@ input[type="range"] ::-webkit-slider-thumb {
 
 .volume-range {
   width: 310px !important;
+}
+
+/* playback speed dropdown */
+
+.custom-dropdown-container {
+  display: inline-block;
+  width: 100px;
+  position: relative;
+}
+
+.custom-dropdown-selected {
+  cursor: pointer;
+  padding: 16px;
+  border-radius: 24px;
+  background-color: #ece4f9;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.custom-dropdown-items {
+  position: absolute;
+  border-left-color: #f9f9f9;
+  border-radius: 4px;
+  z-index: 1;
+  bottom: 62px;
+  width: 100%;
+  /* display: none; */
+}
+
+.custom-dropdown-item {
+  cursor: pointer;
+  padding: 10px;
+  transition: background-color 0.3s;
+  color: #000;
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    color: var(--pinkish);
+  }
+}
+
+.selected-speed {
+  color: var(--pinkish);
+}
+
+.rotate-270 {
+  transform: rotate(270deg);
+}
+
+/* modal style */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  /* align-items: center;
+  justify-content: center; */
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  width: 656px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-image-container {
+  position: relative;
+}
+
+.verified-badge {
+  position: absolute;
+  bottom: 72px;
+  left: 35px;
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+#preview-artist {
+  position: absolute;
+  bottom: 11px;
+  left: 35px;
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+#preview-image {
+  width: 100%;
+  object-fit: cover;
+  height: 222px;
+}
+
+.close {
+  color: #aaa;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* additional styling for the preview details */
+#previewDetails {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 24px;
+  padding: 24px;
+}
+
+#follower-count,
+#listener-count {
+  color: #121212;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  margin-top: 36px;
+  margin-bottom: 8px;
+}
+
+#preview-description{
+  color: #000001;
+  font-family: "Poppins";
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 400;
 }
