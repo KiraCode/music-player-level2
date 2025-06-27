@@ -66,8 +66,9 @@ input[type="range"] {
   padding: 6px;
 }
 
-.item-tag {
+.item-img {
   flex-grow: 0;
+  display: flex;
 }
 
 .track-year {
@@ -102,6 +103,13 @@ input[type="range"] {
 
 .current-song {
   color: var(--pinkish);
+}
+
+.list-thumbnail{
+  width: 42px;
+  height: 42px;
+  border-radius: 4px;
+  padding: 0 6px;
 }
 /* class ended by js */
 
@@ -257,8 +265,9 @@ input[type="range"] ::-webkit-slider-thumb {
 /* playback speed dropdown */
 
 .custom-dropdown-container {
+  display: none;
   display: inline-block;
-  width: 100px;
+  width: 188px;
   position: relative;
 }
 
@@ -273,6 +282,7 @@ input[type="range"] ::-webkit-slider-thumb {
 }
 
 .custom-dropdown-items {
+  display: none;
   position: absolute;
   border-left-color: #f9f9f9;
   border-radius: 4px;
