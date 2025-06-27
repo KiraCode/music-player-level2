@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Music Player App Level 2</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <!-- music player starts -->
@@ -74,38 +74,103 @@
 
           <!-- control buttons -->
           <div class="btn-group">
-            <button class="control-btn" id="restart">
-              <img src="./assets/icons/arrow-repeat.svg" alt="restart" />
+            <button id="shuffle">
+              <img
+                src="./assets/icons/shuffle-highlighted.svg"
+                alt="shuffle"
+                id="shuffle-img"
+              />
             </button>
+
+            <button class="next-prev-btn" id="prev">
+              <img src="./assets/icons/prev.svg" alt="" />
+            </button>
+
             <button id="play-pause">
               <img src="./assets/icons/pause-button.svg" alt="pause" />
             </button>
 
-            <button class="control-btn" id="stop">
-              <img src="./assets/icons/stop.svg" alt="stop" />
+            <button class="next-prev-btn" id="next">
+              <img src="./assets/icons/next.svg" alt="" />
+            </button>
+
+            <button id="repeat">
+              <img
+                src="./assets/icons/loop.svg"
+                alt="repeat img"
+                id="loop-img"
+              />
             </button>
           </div>
+        </div>
 
+        <!-- volume and playback speed container -->
+        <div class="player-bottom-controls">
           <!-- volume -->
-
           <div class="volume-container">
-            <img src="./assets/icons/volume-low.svg" alt="low volume" />
+            <img src="./assets/icons/volume-low.svg" alt="" />
             <input
               type="range"
               id="volume"
+              class="volume-range"
               min="0"
               max="1"
-              value="1"
+              value="0.7"
               step="0.1"
-              class="volume-range"
             />
-            <img src="./assets/icons/volume-high.svg" alt="high volume" />
+            <img src="./assets/icons/volume-high.svg" alt="" />
+          </div>
+
+          <!-- playback speed -->
+          <div class="custom-dropdown-container" id="custom-dropdown">
+            <div class="custom-dropdown-selected" id="selectedValue">
+              <img src="./assets/icons/headphone.svg" alt="" />
+              Playback speed
+              <img src="./assets/icons/arrow.svg" alt="" id="dropdown-arrow" />
+
+              <div class="custom-dropdown-items" id="dropdown-list-item">
+                <div class="customdropdown-item" data-value="2">2x</div>
+                <div class="customdropdown-item" data-value="1.5">1.5x</div>
+                <div class="customdropdown-item" data-value="1.25">1.25x</div>
+                <div class="customdropdown-item selected-speed" data-value="1">
+                  Normal
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- popup modal -->
+    <div id="preview-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-image-container">
+          <span class="close" id="close-modal">
+            <img src="./assets/icons/close.svg" alt="" />
+          </span>
+          <img src="" alt="preview image" id="preview-image" />
+          <p class="verified-badge" id="verified">
+            <img src="./assets/icons/verified.svg" alt="" /> Verified Artist
+          </p>
+          <p id="preview-artist">Artist</p>
+        </div>
+
+        <div id="previewDetails">
+          <div class="preview-status">
+            <h1 id="follower-count"></h1>
+            <p>Follower</p>
+            <h1 id="listener-count"></h1>
+            <p>Monthly Listener</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
     <!-- music player end here -->
-     <script src="./javascript/script.js"></script>
+
+    <script src="./javascript/script.js"></script>
   </body>
 </html>
 
