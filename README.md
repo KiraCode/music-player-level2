@@ -13,7 +13,7 @@ This is an advanced version of the basic web-based Music Player. Each audio file
 
 ## 🚀 Live Demo
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-green?style=for-the-badge&logo=vercel)](https://kira-music-player-level1.netlify.app/)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-green?style=for-the-badge&logo=vercel)](https://kira-music-player-level2.netlify.app/)
 
 ## 💻 Technologies Used
 
