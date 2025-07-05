@@ -32,7 +32,7 @@ This is an advanced version of the basic web-based Music Player. Each audio file
 ![Popup](./assets/popup.png)
 
 ### 🛠️ Playback Speed and Controls  
-![Controls](./assetd/controls.png)
+![Controls](./assets/controls.png)
 
 ## 📁 Project Structure
 
